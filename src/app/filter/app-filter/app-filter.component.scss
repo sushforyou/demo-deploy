@@ -1,3 +1,4 @@
+
 .filter-menu {
   width: 250px;
   height: 500px;
@@ -11,12 +12,36 @@
   font-size: large;
   font-weight: bold;
 }
-.btn{
+.filterText {
+  width: 190px;
+  text-align: center;
+}
+
+.bottomBorder {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #374d07;
+  line-height: 48px;
+  margin-left:50px;
+}
+.btn {
   width:50px;
-  height: 20px;
+  height: 20px;;
+  background:#c3f18d;
+  border: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: #68ad16;
+}
+.binary-btns-box {
+ margin-left: 30px;
+ .btn {
+   margin-right:60px;
+ }
 }
 .filter-grid-container {
   display: grid;
   grid-gap:10px;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(100px , 2fr)); 
+  margin-left: 30px;
 }
