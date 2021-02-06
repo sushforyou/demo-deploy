@@ -1,4 +1,4 @@
-
+//npm run serve:ssr
 
 * {
     box-sizing: border-box;
@@ -15,6 +15,20 @@ body {
     overflow: hidden;
     background-color: #eaebed;
 }
+.filters-txt {
+  margin-left: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+.btn{
+  width:50px;
+  height: 20px;
+}
+.filter-grid-container {
+  display: grid;
+  grid-gap:10px;
+  grid-template-columns: auto auto;
+}
 .footer {
   text-align: center;
 }
@@ -29,10 +43,39 @@ body {
 }
 .container{
  display: grid;
- grid-gap:20px;
- grid-template-columns: repeat(auto-fit, minmax(500px , 2fr)); 
+ grid-gap:10px;
+ grid-template-columns: repeat(auto-fit, minmax(250px , 4fr)); 
 
+ padding: 10px;
+ grid-gap: 10px;
+ margin:15px;
+ margin-left: 260px;
+ margin-top: -510px;
 }
+.filter-menu {
+  width: 250px;
+  height: 500px;
+  display:inline-block;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-left: 2px;
+  margin-right: 15px;
+}
+.grid-container {
+ display: grid ;
+ grid-template-columns: auto auto auto auto ;
+
+ padding: 10px;
+ grid-gap: 10px;
+ margin:15px;
+ margin-left: 260px;
+ margin-top: -510px;
+}
+.grid-item {
+ background-color: rgba(255, 255, 255, 0.8);
+ padding: 20px;
+ font-size: 30px;
+ text-align: center;
+ }
   /* Responsive devlopment for screens like : mobile, tablet and desktop */
 @media screen and (max-width: 700px) {
   .devName {  
