@@ -6,9 +6,7 @@ import { Component, AfterViewInit, ElementRef } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  title = 'SpaceX Launch Programs';
-  developedBy = 'Sushant Kunkekar';
-  constructor(private elementRef: ElementRef) { }
+    constructor(private elementRef: ElementRef) { }
        ngAfterViewInit() {
          this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#eaebed';
       }
