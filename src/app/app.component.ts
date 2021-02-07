@@ -46,14 +46,6 @@ export class AppComponent implements AfterViewInit {
   public getData() {
     this.service.getDefaultData().subscribe((data: any) => {
       this.posts = data;
-      for ( const obj of this.posts) {
-        this.missionName = obj.mission_name;
-        this.flightNumber = obj.flight_number;
-        this.launchYear = obj.launch_year;
-        this.launchSuccess = obj.launch_success;
-        this.landSuccess = obj.launch_landing;
-        this.imgUrl = obj.links.mission_patch_small;
-      }
     });
   }
   // Launch Success Filter:
