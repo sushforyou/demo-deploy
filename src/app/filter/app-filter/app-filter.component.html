@@ -6,20 +6,20 @@
     </div>
     
     <div class="filter-grid-container">
-      <button class="btn"*ngFor="let btn of yearArr;" (click)="clicked(btn)">{{btn}}</button>
+      <button class="btn" *ngFor="let btn of yearArr;" (click)="clicked(btn)">{{btn}}</button>
     </div>
     <div class="filterText">
       <span class="bottomBorder">Successful Launch</span>
     </div>
     <div class="binary-btns-box">
-        <button class="btn" (click)="isLaunchSuccess(true)">True</button>
-        <button class="btn" (click)="isLaunchSuccess(false)">False</button>
+        <button class="btn"  (click)="isLaunchSuccess(true)">True</button>
+        <button class="btn"  (click)="isLaunchSuccess(false)">False</button>
     </div>
     <div class="filterText">
       <span class="bottomBorder">Successful Landing</span>
     </div>
     <div class="binary-btns-box">
-      <button class="btn" (click)="isLandingSuccess(true)">True</button>
+      <button class="btn"  (click)="isLandingSuccess(true)">True</button>
       <button class="btn"  (click)="isLandingSuccess(false)">False</button>
     </div>
 </div>

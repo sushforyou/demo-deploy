@@ -30,8 +30,8 @@
   border: none;
   border-radius: 5px;
 }
-.btn:hover {
-  background: #68ad16;
+.btnClicked {
+  background: #3ca80a;
 }
 .binary-btns-box {
  margin-left: 30px;
@@ -45,3 +45,21 @@
   grid-template-columns: repeat(auto-fit, minmax(100px , 2fr)); 
   margin-left: 30px;
 }
+//  /* Responsive devlopment for screens like : mobile, tablet and desktop */
+// @media screen and (max-width: 700px) {
+//   .filter-menu {
+//   width: 100%;
+//   height: 100%;
+//   display:block;
+//   background-color: rgba(255, 255, 255, 0.8);
+//   margin-left: 2px;
+//   margin-right: 15px;
+// }
+// .filter-grid-container {
+//   display: grid;
+//   grid-gap:10px;
+//   grid-template-columns: 1; 
+//   margin-left: 30px;
+// }
+
+//}

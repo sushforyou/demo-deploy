@@ -26,6 +26,9 @@ export class AppFilterComponent implements OnInit {
   public yearSelected: number;
   public isLaunched: boolean;
   public isLanded: boolean;
+  // public yearClicked = false;
+  // public lanchClicked = false;
+  // public landClicked = false;
   constructor() {}
   // @Output() public yearSelected = new EventEmitter<number>();
   // @Output() public isLaunched = new EventEmitter<boolean>();
@@ -33,14 +36,17 @@ export class AppFilterComponent implements OnInit {
   @Output() public data = new EventEmitter<{ yearSelected: number, isLaunched: boolean, isLanded: boolean }>();
   public ngOnInit() {}
   public clicked(year) {
+   // this.yearClicked = true;
     this.yearSelected = year;
     this.send();
   }
   public isLaunchSuccess(isSucces) {
+    // this.lanchClicked = true;
     this.isLaunched = isSucces;
     this.send();
   }
   public isLandingSuccess(isSucces) {
+    // this.landClicked = true;
     this.isLanded = isSucces;
     this.send();
   }
@@ -50,5 +56,6 @@ export class AppFilterComponent implements OnInit {
       isLaunched: this.isLaunched,
       isLanded: this.isLanded
     });
+    
   }
 }

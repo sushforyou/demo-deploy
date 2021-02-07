@@ -3,9 +3,10 @@
 <!-- <app-filter (isLaunched)="launchSuccessfulfn($event)"></app-filter>
 <app-filter (isLanded)="landSuccessfulfn($event)"></app-filter> -->
 <div class="container">
-  <h2>{{model.yearSelected}}</h2>
-  <h2>{{model.isLaunched}}</h2>
-  <h2>{{model.isLanded}}</h2>
+  <button (click)="getData()">Click</button>
+  <div *ngFor="let p of posts|async">
+    {{post|json}}
+  </div>
   <!-- <div class="grid-item">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
