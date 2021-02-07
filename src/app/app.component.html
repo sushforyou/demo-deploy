@@ -1,7 +1,12 @@
 <app-header></app-header>
-<app-filter></app-filter>
+<app-filter (data) = "fiteredData($event)"></app-filter>
+<!-- <app-filter (isLaunched)="launchSuccessfulfn($event)"></app-filter>
+<app-filter (isLanded)="landSuccessfulfn($event)"></app-filter> -->
 <div class="container">
-  <div class="grid-item">
+  <h2>{{model.yearSelected}}</h2>
+  <h2>{{model.isLaunched}}</h2>
+  <h2>{{model.isLanded}}</h2>
+  <!-- <div class="grid-item">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
   </div>
@@ -26,9 +31,8 @@
   </div>
   <div class="grid-item">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-  </div>
+  </div> -->
 
 </div>
-<button type ="button"(click) ="uppercase()">Please click</button>
-<p>{{upper}}</p>
+
 <app-footer></app-footer>

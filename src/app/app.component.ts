@@ -7,14 +7,16 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  upper = '';
+  public model = { yearSelected: NaN, isLaunched: false, isLanded: false};
   constructor(public service: AppService, private elementRef: ElementRef) {}
   ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#eaebed';
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor =
+      '#eaebed';
   }
-
-  uppercase() {
-    const str = this.service.getString();
-    this.upper = str.toUpperCase();
-    }
+  public fiteredData(data) {
+    this.model = data;
+    console.log(this.model.yearSelected);
+    console.log(this.model.isLaunched);
+    console.log(this.model.isLanded);
+  }
 }
