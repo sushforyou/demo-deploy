@@ -1,15 +1,15 @@
 <app-header></app-header>
 <app-filter (data) = "fiteredData($event)"></app-filter>
-<!-- <app-filter (isLaunched)="launchSuccessfulfn($event)"></app-filter>
-<app-filter (isLanded)="landSuccessfulfn($event)"></app-filter> -->
+
 <div class="container">
-  <button (click)="getData()">Click</button>
-  <div *ngFor="let p of posts|async">
-    {{post|json}}
-  </div>
-  <!-- <div class="grid-item">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+ 
+  <div class="grid-item">
+    <img src={{imgUrl}} alt="" width="100" height="100"> <br>
+    {{missionName}}#{{flightNumber}}<br>
+    Mission Id: <br>
+    Launch Year: {{launchYear}} <br>
+    Successful Launch : {{launchSuccess}}<br>
+    Successful Landing:{{landSuccess}}
   </div>
   <div class="grid-item">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt u
@@ -32,7 +32,7 @@
   </div>
   <div class="grid-item">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-  </div> -->
+  </div>
 
 </div>
 
