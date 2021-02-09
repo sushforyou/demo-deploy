@@ -1,4 +1,6 @@
-
+* {
+  font-family: "Nunito", sans-serif;
+}
 .filter-menu {
   width: 250px;
   height: 500px;
@@ -18,10 +20,10 @@
 }
 
 .bottomBorder {
-  padding-bottom: 3px;
-  border-bottom: 2px solid #374d07;
-  line-height: 48px;
-  margin-left:50px;
+    text-align: center;
+    border-bottom: 1px solid #bebebe;
+    margin: 0 30px;
+    margin-bottom: 10px;
 }
 .btn {
   width:50px;
@@ -41,7 +43,7 @@
 }
 .filter-grid-container {
   display: grid;
-  grid-gap:10px;
+  grid-gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(100px , 2fr)); 
   margin-left: 30px;
 }

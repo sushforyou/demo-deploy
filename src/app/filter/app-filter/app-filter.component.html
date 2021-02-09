@@ -6,20 +6,27 @@
     </div>
     
     <div class="filter-grid-container">
-      <button class="btn" *ngFor="let btn of yearArr;" (click)="clicked(btn)">{{btn}}</button>
+        <button class="btn" *ngFor="let obj of btnArray"[ngClass]="{'btnClicked' : obj.clicked}" (click)="clicked(obj)">{{obj.year}}</button>
+      <!-- <button class="btn"  [ngClass]="{'btnClicked' : btn.clicked}"
+       (click)="clicked(btn)">{{btn.year}}</button> -->
+      <!-- <button class="btn" [ngClass]="{'btnClicked' : yearClicked}" (click)="clicked(2007)">2007</button> -->
     </div>
     <div class="filterText">
       <span class="bottomBorder">Successful Launch</span>
     </div>
     <div class="binary-btns-box">
-        <button class="btn"  (click)="isLaunchSuccess(true)">True</button>
-        <button class="btn"  (click)="isLaunchSuccess(false)">False</button>
+      <button class="btn" *ngFor="let obj of lauchBtns" [ngClass]="{'btnClicked' : obj.clicked}"
+        (click)="isLaunchSuccess(obj)">{{obj.displayName}}</button>
+        <!-- <button class="btn"  (click)="isLaunchSuccess(true)">True</button>
+        <button class="btn"  (click)="isLaunchSuccess(false)">False</button> -->
     </div>
     <div class="filterText">
       <span class="bottomBorder">Successful Landing</span>
     </div>
     <div class="binary-btns-box">
-      <button class="btn"  (click)="isLandingSuccess(true)">True</button>
-      <button class="btn"  (click)="isLandingSuccess(false)">False</button>
+      <button class="btn" *ngFor="let obj of landBtns" [ngClass]="{'btnClicked' : obj.clicked}"
+        (click)="isLandingSuccess(obj)">{{obj.displayName}}</button>
+      <!-- <button class="btn"  (click)="isLandingSuccess(true)">True</button>
+      <button class="btn"  (click)="isLandingSuccess(false)">False</button> -->
     </div>
 </div>
