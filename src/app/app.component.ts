@@ -27,7 +27,7 @@ export class AppComponent implements AfterViewInit {
   }
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor =
-     '#eaebed';
+      '#f2f2f2';
   }
   public fiteredData(data) {
     this.model = data;
