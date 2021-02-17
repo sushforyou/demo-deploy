@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 5. Tools(webpack)
 ## Development server
 
- Navigate to [Heroku Link](https://angular-app-2021.herokuapp.com/). to see on Heroku deployment.
+ Navigate to [Heroku Link](https://angular-app-2021.herokuapp.com/) to see on Heroku deployment.
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
