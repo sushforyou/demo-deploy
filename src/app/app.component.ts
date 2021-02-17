@@ -3,21 +3,22 @@ import { AppService } from './app.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements AfterViewInit {
   public model = { yearSelected: 0, isLaunched: false, isLanded: false };
-  readonly ROOT_URL = 'https://api.spaceXdata.com/v3/launches?limit=100';
+  readonly ROOT_URL = "https://api.spaceXdata.com/v3/launches?limit=100";
   public posts: any;
-  public imgUrl = '';
-  public missionName = '';
-  public flightNumber = '';
-  public missionId = [];
-  public launchYear ;
+  public imgUrl = "";
+  public missionName = "";
+  public flightNumber = "";
+  public missionIds = [];
+  public launchYear;
   public launchSuccess;
   public landSuccess;
+  public nodata = false;
   constructor(
     public service: AppService,
     private http: HttpClient,
@@ -27,7 +28,7 @@ export class AppComponent implements AfterViewInit {
   }
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor =
-      '#f2f2f2';
+      "#f2f2f2";
   }
   public fiteredData(data) {
     this.model = data;
@@ -46,14 +47,23 @@ export class AppComponent implements AfterViewInit {
   public getData() {
     this.service.getDefaultData().subscribe((data: any) => {
       this.posts = data;
+      this.missionIds = this.posts.mission_id;
+      console.log(this.posts);
+      const name = this.posts[13].rocket.first_stage.cores[0].land_success;
+      console.log(name);
     });
   }
   // Launch Success Filter:
   public launchData(lanuchValue) {
     const launch = lanuchValue;
+    this.nodata = false;
     this.service.launchData(launch).subscribe(
       (data: any) => {
         this.posts = data;
+        const len = this.posts.length;
+        if (len === 0) {
+          this.nodata = true;
+        }
       },
       err => console.log(err)
     );
@@ -62,8 +72,13 @@ export class AppComponent implements AfterViewInit {
   public landData(lanuchValue, landValue) {
     const launch = lanuchValue;
     const land = landValue;
+    this.nodata = false;
     this.service.landData(launch, land).subscribe((data: any) => {
       this.posts = data;
+      const len = this.posts.length;
+      if (len === 0) {
+        this.nodata = true;
+      }
     });
   }
   // All data with year, lauch and land filter
@@ -71,8 +86,13 @@ export class AppComponent implements AfterViewInit {
     const launch = lanuchValue;
     const land = landValue;
     const year = yearValue;
+    this.nodata = false;
     this.service.allData(launch, land, year).subscribe((data: any) => {
       this.posts = data;
+      const len = this.posts.length;
+      if (len === 0) {
+        this.nodata = true;
+      }
     });
   }
 }

@@ -1,17 +1,22 @@
 <div class="contaniner">
   <app-header></app-header>
   <app-filter (data)="fiteredData($event)"></app-filter>
-  
-  <div class="grid-container">
-    <div class="grid-item" *ngFor="let obj of posts">
+  <div *ngIf="!nodata"class="grid-container">
+   
+     <div class="grid-item" *ngFor="let obj of posts">
       <img class="launchImage" src={{obj.links.mission_patch_small}} alt="" width="100" height="100"> <br>
-      {{obj.mission_name}}#{{obj.flight_number}}<br>
-      Mission Id: <br>
-      Launch Year: {{obj.launch_year}} <br>
-      Successful Launch : {{obj.launch_success}}<br>
-      Successful Landing: {{obj.rocket.first_stage.cores[0].land_success}}
-    </div>
+      <span class="missionName">{{obj.mission_name}}#{{obj.flight_number}}</span><br><br>
+      <span>Mission Ids:</span>
+      <ul *ngIf="obj.mission_id.length > 0"><li>{{obj.mission_id}}</li></ul>
+      <br><span>Launch Year:</span> <span class="txt">{{obj.launch_year}}</span> <br>
+      <span>Successful Launch :</span> <span class="txt">{{obj.launch_success}}</span> <br>
+      <span>Successful Landing:</span> <span class="txt">{{obj.rocket.first_stage.cores[0].land_success}}</span>
+      </div>
+   
+    
   </div>
-  
+  <div *ngIf="nodata" class="grid-container">
+    No Data Available
+  </div>
   <app-footer></app-footer>
 </div>

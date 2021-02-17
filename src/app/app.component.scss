@@ -28,7 +28,37 @@ body {
 //  margin-left: 260px;
 //  margin-top: -510px;
 }
+.missionName {
+    margin-bottom: 10px;
+    color: #464e8e;
+    font-weight: bold;
+}
+span {
+    font-weight: bold;
+    color: black;
+ 
+}
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 1em; 
+  text-indent: -.7em;
+}
+
+li::before {
+  content: "• ";
+  color: #464e8e;; 
+}
+.txt {
+   color: #464e8e;
+   font-weight: 200;
+    margin-bottom: 10px;
+}
 .grid-container {
  display: grid ;
  grid-template-columns: auto auto auto auto ;
