@@ -1,12 +1,14 @@
 # SpaceX Dashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+
 ##Tech Stack
-HTML & CSS
-JS(Angular)
-Angular Universal for SSR
-Server(Express)
-Tools(webpack)
+
+1. HTML & CSS
+2. JS(Angular)
+3. Angular Universal for SSR
+4. Server(Express)
+5. Tools(webpack)
 ## Development server
 
  Navigate to `https://angular-app-2021.herokuapp.com/`. To see on Heroku deployment
