@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
-##Tech Stack
+## Tech Stack
 
 1. HTML & CSS
 2. JS(Angular)
